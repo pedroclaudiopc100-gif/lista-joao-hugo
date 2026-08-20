@@ -2,19 +2,33 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
 
-    <!-- Responsividade para celulares, tablets e computadores -->
+    <!-- Responsividade para celular, tablet e computador -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>João Hugo</title>
+    <!-- Nome da página -->
+    <title>Lista do João</title>
+
+    <!-- Informações exibidas ao compartilhar o link -->
+    <meta property="og:title" content="Lista do João">
+    <meta property="og:description" content="Confira a Lista do João">
+    <meta property="og:type" content="website">
+
+    <!--
+        COLOQUE AQUI O LINK DA SUA IMAGEM
+        Exemplo:
+        https://raw.githubusercontent.com/usuario/repositorio/main/imagem.png
+    -->
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/pedroclaudiopc100-gif/lista-joao-hugo/refs/heads/main/Lista%20de%20presente%20joao.jpeg">
+
 
     <style>
 
-        /* =====================================================
+        /* ==============================
            RESET
-        ===================================================== */
+        ============================== */
 
         * {
             margin: 0;
@@ -23,30 +37,32 @@
         }
 
 
-        /* =====================================================
+        /* ==============================
            PÁGINA
-        ===================================================== */
+        ============================== */
 
         html,
         body {
             width: 100%;
             height: 100%;
-        }
+            margin: 0;
+            padding: 0;
 
-        body {
-            background: #000;
             overflow: hidden;
+
+            background: #000;
         }
 
 
-        /* =====================================================
-           ÁREA DA IMAGEM
-        ===================================================== */
+        /* ==============================
+           ÁREA DA TELA
+        ============================== */
 
         .tela {
 
-            width: 100vw;
+            width: 100%;
             height: 100vh;
+            height: 100dvh;
 
             display: flex;
 
@@ -59,27 +75,29 @@
         }
 
 
-        /* =====================================================
+        /* ==============================
            IMAGEM
-        ===================================================== */
+        ============================== */
 
         .imagem {
 
             /*
-             * A imagem pode ocupar no máximo
-             * o tamanho da tela.
+             * Nunca ultrapassa os limites
+             * da tela.
              */
             max-width: 100%;
             max-height: 100%;
 
             /*
-             * Mantém a proporção original.
+             * Mantém a proporção original
+             * da imagem.
              */
             width: auto;
             height: auto;
 
             /*
-             * NÃO corta a imagem.
+             * NÃO corta nenhuma parte
+             * da imagem.
              */
             object-fit: contain;
 
@@ -88,51 +106,60 @@
              */
             object-position: center;
 
-            /*
-             * Remove pequenos espaços
-             * causados pelo comportamento inline.
-             */
             display: block;
         }
 
 
-        /* =====================================================
+        /* ==============================
            CELULAR
-        ===================================================== */
+        ============================== */
 
         @media (max-width: 768px) {
 
             .tela {
-                width: 100vw;
+                width: 100%;
                 height: 100vh;
+                height: 100dvh;
+
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
             }
 
             .imagem {
 
-                max-width: 100vw;
-                max-height: 100vh;
+                max-width: 100%;
+                max-height: 100%;
 
                 width: auto;
                 height: auto;
 
                 object-fit: contain;
+
+                object-position: center;
             }
         }
 
 
-        /* =====================================================
-           CELULAR EM MODO PAISAGEM
-        ===================================================== */
+        /* ==============================
+           CELULAR DEITADO
+        ============================== */
 
-        @media (max-height: 500px) {
+        @media (orientation: landscape) {
 
             .imagem {
 
                 max-width: 100vw;
                 max-height: 100vh;
+                max-height: 100dvh;
 
                 width: auto;
                 height: auto;
+
+                object-fit: contain;
+
+                object-position: center;
             }
         }
 
@@ -146,14 +173,20 @@
     <main class="tela">
 
         <!--
-            Coloque sua imagem na mesma pasta
-            deste arquivo e altere o nome abaixo.
+            ==================================================
+            COLOQUE AQUI O LINK DA SUA IMAGEM
+            ==================================================
+
+            Exemplo:
+
+            src="https://raw.githubusercontent.com/
+            usuario/repositorio/main/imagem.png"
         -->
 
         <img
             class="imagem"
-            src="Lista de presente joao.jpeg"
-            alt="Imagem principal"
+            src="https://raw.githubusercontent.com/pedroclaudiopc100-gif/lista-joao-hugo/refs/heads/main/Lista%20de%20presente%20joao.jpeg"
+            alt="Lista do João"
         >
 
     </main>
